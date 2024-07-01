@@ -2,19 +2,15 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
-
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import { CgGitFork } from "react-icons/cg";
+import { AiFillStar } from "react-icons/ai";
+import Button from "react-bootstrap/Button";
+import { FaLinkedinIn } from "react-icons/fa"; // Import LinkedIn icon
+import { AiFillGithub } from "react-icons/ai"; // Import GitHub icon
+import { AiOutlineMail } from "react-icons/ai"; // Import Gmail icon
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -38,9 +34,6 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -93,14 +86,47 @@ function NavBar() {
             </Nav.Item>
 
 
+
+            {/* LinkedIn Link */}
+            <Nav.Item>
+              <Nav.Link
+                href="https://www.linkedin.com/in/bhavya-rangu-66b72a1b8/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn style={{ fontSize: "1.8em", color: "#ffffff", backgroundColor: "#0077B5", borderRadius: "50%", padding: "6px" }} />
+              </Nav.Link>
+            </Nav.Item>
+
+            {/* GitHub Link */}
+            <Nav.Item>
+              <Nav.Link
+                href="https://github.com/bhavyarangu333"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub style={{ fontSize: "1.8em", color: "#ffffff", backgroundColor: "#333333", borderRadius: "50%", padding: "4px" }} /> 
+              </Nav.Link>
+            </Nav.Item>
+
+            {/* Gmail Link */}
+            <Nav.Item>
+              <Nav.Link
+                href="mailto:bhavyaangu0309@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineMail style={{ fontSize: "1.8em", color: "#ffffff", backgroundColor: "#D14836", borderRadius: "50%", padding: "6px" }} />
+              </Nav.Link>
+            </Nav.Item>
             <Nav.Item className="fork-btn">
               <Button
-                href="https://bhavya-portfolio-qtx9jlrjo-bhavya-rangus-projects-5c95ec8d.vercel.app/"
+                href="https://github.com/bhavyarangu333/BHAVYA-PORTFOLIO.git"
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <CgGitFork style={{ fontSize: "1.5em", marginRight: "5px" }} />{" "}
+                <AiFillStar style={{ fontSize: "1.3em" }} />
               </Button>
             </Nav.Item>
           </Nav>

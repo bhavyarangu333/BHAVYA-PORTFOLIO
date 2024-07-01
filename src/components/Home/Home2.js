@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+//import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/Designer (2).png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   AiOutlineTwitter,
-  AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -24,7 +24,7 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> C++, Javascript, Python and Java. </b>
               </i>
               <br />
               <br />
@@ -54,7 +54,14 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+            <img
+  src={myImg}
+  className="img-fluid rounded-circle"
+  style={{ maxWidth: '250px', maxHeight: '250px', borderRadius: '50%' }}
+  alt="avatar"
+/>
+
+
             </Tilt>
           </Col>
         </Row>
