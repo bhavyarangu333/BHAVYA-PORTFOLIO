@@ -20,7 +20,6 @@ function Home2() {
             </h1>
             <p className="home-about-body">
               My passion lies in crafting innovative solutions that bridge the gap between cutting-edge technologies and real-world needs. I'm proficient in a range of programming languages, including Java, Python, and JavaScript, allowing me to navigate diverse projects with confidence. Further, my understanding of various software development methodologies ensures efficient and well-structured code.
-              something, I think… 🤷‍♂️
               <br />
               <br />I am fluent in classics like
               <i>
